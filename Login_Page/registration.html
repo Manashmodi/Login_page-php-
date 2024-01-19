@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: skyblue;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: auto;
+            width: 40%;
+        }
+
+        label {
+            display: block;
+            float: left;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        select {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Page</h1>
+    <form action="./api/registration.php" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Enter name" required><br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter Email" required><br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Enter password" required><br><br>
+        <label for="Cpassword">Confirm Password</label>
+        <input type="password" name="Cpassword" placeholder="Confirm password" required><br><br>
+        <label for="role">Select Gender</label>
+        <select name="role" required>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+        </select><br><br>
+        <input type="submit" name="submit" value="Submit" /><br><br>
+        Already a user? <a href="./index.html">Login Here</a>
+    </form>
+</body>
+</html>
